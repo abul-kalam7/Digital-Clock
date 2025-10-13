@@ -1,7 +1,5 @@
 const timeNow = document.querySelector(".timeNow")
 const dateNow = document.querySelector(".dateNow")
-const h12 = document.querySelector(".h12")
-const h24 = document.querySelector(".h24")
 
 const date = new Date();
 let nowDay = date.getDay();
@@ -32,27 +30,13 @@ let nowSecondUpdate = setInterval(() => {
                 }
             }
         }
-    }
-
-    
-
+    } 
 
     const formattedTime = `${nowHour.toString().padStart(2, '0')}:`+
     `${nowMinute.toString().padStart(2, '0')}:`+
     `${nowSecond.toString().padStart(2, '0')}`
     timeNow.innerHTML = ` ${formattedTime}`;
-}, 1000);
-
-h24.addEventListener("click", () => {
-     
-    
-})
-
-h12.addEventListener("click", () =>{
-     
-})
-
-
+}, 1000); 
 function monthName() {
     if (nowMonth == 1) {
         nowMonth = "January";

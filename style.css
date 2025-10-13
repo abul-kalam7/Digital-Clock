@@ -23,7 +23,7 @@ body {
     width: 80%;
     border-bottom: 1px solid rgba(63, 63, 63, 0.842);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -33,20 +33,7 @@ body {
     font-family: 'poppins';
     font-size: 18px;
 }
-
-.nameCon div{
-    padding: 12px 7px 8px 0px;
-}
-
-.nameCon div a{ 
-    font-size: 15px;
-      font-family: 'poppins';
-        font-weight: 410;
-        text-decoration: none;
-        color: #000000;
-        margin: 0 2px;
-}
-
+ 
 .clockCon {
     height: 60vh;
     width: 60vw;
@@ -57,48 +44,7 @@ body {
     margin: auto;
     font-family: 'Times New Roman';
 }
-
-.ap{
-    box-sizing: border-box;
-    width: 80vmin;
-    margin: 0 auto 8px auto; 
-    display: flex;
-    justify-content: end; 
-    text-align: center;
-    font-size: 12px;  
-}
-
-.h12{
-    color: black;
-    margin-right: 2px;
-    background-color: #88b8ffdc; 
-    /* padding: 7px 5px 8px 5px;  */
-    border: 1px solid rgba(0, 0, 0, 0.911);
-    border-radius: 3px;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-       padding: 1px 2px 1px 1px;
-}
-
-.h24{
-    color: black;
-    margin-right: 5px; 
-     background-color: #88b8ffdc;
-    /* padding: 7px 5px 8px 5px;  */
-     border: 1px solid rgba(0, 0, 0, 0.911);
-     border-radius: 3px;
-     width: 20px;
-     height: 20px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   padding: 1px 2px 1px 1px;
-}
-
-
+ 
 .timeNow {
     font-size: 20vmin;
     text-align: center;
