@@ -1,5 +1,22 @@
 const timeNow = document.querySelector(".timeNow")
 const dateNow = document.querySelector(".dateNow")
+const fotns = document.querySelector(".fonts")
+
+
+fotns.addEventListener("click", () => {
+
+    if (fotns.value === "sans-serif") {
+        timeNow.style.fontFamily = "sans-serif";
+    } else if (fotns.value === "Cabin Sketch") {
+        timeNow.style.fontFamily = "Cabin Sketch"
+    } else if (fotns.value === "Bungee Outline") {
+        timeNow.style.fontFamily = "Bungee Outline"
+    } else {
+        timeNow.style.fontFamily = "BBH Sans Bogle"
+    }
+
+})
+
 
 const date = new Date();
 let nowDay = date.getDay();
@@ -30,13 +47,32 @@ let nowSecondUpdate = setInterval(() => {
                 }
             }
         }
-    } 
+    }
 
-    const formattedTime = `${nowHour.toString().padStart(2, '0')}:`+
-    `${nowMinute.toString().padStart(2, '0')}:`+
-    `${nowSecond.toString().padStart(2, '0')}`
+    let ampm = nowHour >= 12 ? " pm" : " am"
+    let displayHour = nowHour % 12;
+    if (displayHour === 0) {
+        displayHour = 12;
+    }
+
+    const formattedTime = `${displayHour.toString().padStart(2, '0')}:` +
+        `${nowMinute.toString().padStart(2, '0')}:` +
+        `${nowSecond.toString().padStart(2, '0')}` + `${ampm}`
     timeNow.innerHTML = ` ${formattedTime}`;
-}, 1000); 
+}, 1000);
+
+/*
+let ampm = nowHour >= 12 ? 'PM' : 'AM';
+let displayHour = nowHour % 12;
+if (displayHour === 0) displayHour = 12;
+
+const formattedTime = `${displayHour.toString().padStart(2, '0')}:`+
+`${nowMinute.toString().padStart(2, '0')}:`+
+`${nowSecond.toString().padStart(2, '0')} ${ampm}`;
+timeNow.innerHTML = ` ${formattedTime}`;
+
+*/
+
 function monthName() {
     if (nowMonth == 1) {
         nowMonth = "January";
